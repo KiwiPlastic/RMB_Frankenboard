@@ -5,11 +5,11 @@ A Team.C.R.A.P Project
 ## Licensing
 Non-commercial license is in effect. This license flows to derivative works.
 You are free to remix / modify the blaster as you see fit. Please share
-If you post a remix, please link back to the original.
-Commercial use is allowed with the purchase of a RMB-Frankenboard at a ratio of one board = one commercial build.
+If you post a remix, please link back to the original
+Commercial use is allowed with the purchase of a RMB-Frankenboard at a ratio of one board = one commercial build
 
 ## Attributions
-(c) 2019-2021 Michael Ireland / Ireland Software / Airzone for example code used early on in project development work.
+(c) 2019-2021 Michael Ireland / Ireland Software / Airzone for example code used early on in project development work
 BLE Server examples
     Based on Neil Kolban example for IDF: https://github.com/nkolban/esp32-snippets/blob/master/cpp_utils/tests/BLE%20Tests/SampleNotify.cpp
     Ported to Arduino ESP32 by Evandro Copercini
@@ -71,17 +71,14 @@ RMB-Frankenboard is integrated into the newest version of Mjölnir evolved, files
 On receiving your RMB-Frankenboard, the first thing to do BEFORE any soldering is started, is to confirm its operation.
 
 Confirm PCB operation in one of two ways:-
-- Option 1. Using Phone App. 
-Install App on to Android phone from this this link https://play.google.com/apps/internaltest/4701250598279133112
+- Option 1. Useing Phone App. Install App on to Android phone from this this link https://play.google.com/apps/internaltest/4701250598279133112
 	or use APK file in this repository to install App.
-
 	Power up RMB-Franken board, using USB-C lead in to a USB power supply or USB on a PC/Laptop
-	Use App to connect to RMB-Frankenboard and confirm its working by scanning and connecting.
+	Use App to connect to RMB-Frankenboard and confirm its working by scanning and connecting
 
-- Option 2. Using Arduino IDE. 
-Plug in a USB C data sync lead (Not a charger lead) between RMB-Frankenboard and PC
+- Option	2. Using Arduino IDE, plug in a USB C data sync lead (Not a charger lead) between RMB-Frankenboard and PC
 	Start Arduino IDE and set serial port via tools menu to correct number	
-	Open serial monitor window, set board rate to 115200. You sHould see text output, probably "BAT low" from RMB-Frankenboard in the serial window
+	Open serial monitor window, set board rate to 115200. you sound see text output, probably "BAT low" from RMB-Frankenboard in the serial window
 	If not try reboot by via power cycle on USB, with serial window open, you should see quite a few lines of text on startup if the serial window is already open.
 
 Once you have confirmed you have a working board on the bench, you can start your build. Install board and solder up.
@@ -91,17 +88,17 @@ Once wires are connected, the RMB-Frankenboad needs to be powered from a Li-po b
 
 ### Before power up...
 Solenoid pusher must have a aligned dufa attached to it, for the optical interrupts on the solder side of PCB to work correctly.
-- Once dufa is in place ensure you can hold the pusher in the fully out(on) position. 
-- The dufa should be sitting between the front Optic interrupt gate and NOT touching it.
-- Let the pusher go, in such a way that it snaps back via the spring. First time do it slow.
-- Once again ensure the dufa has not come in contact with the rear Gate, and is sitting nicely between its uprights.
+Once dufa is in place ensure you can hold the pusher in the fully out(on) position. 
+The dufa should be sitting between the front Optic interrupt gate and NOT touching it.
+Let the pusher go, in such a way that it snaps back via the spring. First time do it slow.
+Once again ensure the dufa has not come in contact with the rear Gate, and is sitting nicely between its uprights.
 
 Tech Note: If this is not configured before power up, the pcb will not function correctly. 
 It will do single shot slowly, no burst or full auto.
 Due to the Mosfet being turned hard on for an extended period of time you might damage the Mosfet missing this step. 
 If there is a fault with the optics this is how it will respond.
 
-### Plug your Li-Po battery in.
+Plug your Li-Po battery in.
 You should here the start up beeps of the ESC's, twice.
 
 Connect to RMB-Frankenboard via the app, confirm its reading battery voltage eg will be around 12v
