@@ -22,15 +22,13 @@ RMB-Frankin Board
 by Team C.R.A.P is licensed under the Creative Commons - Attribution - Non Commercial Licence
 https://creativecommons.org/licenses/by-nc/4.0/
 
-Read this HEADER before asking dumb questions, ends line 168, or expect to get Dump answers
-
 Summary
   This code is for a Signal, or Two stage Brushless Nerf type Blaster. Using a solenoid pusher with closed loop feedback sensors
   It uses a three position switch for select fire
   Configuration is via a Android phone app
 
 Hardware
- - Seeed XIAO ESP32C3 or Seeed XIAO ESP32S3 (S3 is recommended it faster)
+ - Seeed XIAO ESP32C3 
  - Brushless 
  - Solenoid Pusher 
  - Single-Stage Trigger 
@@ -47,7 +45,7 @@ Getting Started:
   We recommend Flashing the ESP32 before doing anything else. This can save you money
   If you can not get this done you wont move forward.
 
-  NOTE: You need a USB lead that supports data, NOT a phone charger lead which do not   transfer data and are common
+  NOTE: You need a USB lead that supports data, NOT a phone charger lead which do not transfer data and are common
 
   https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/
 
@@ -99,12 +97,6 @@ Getting Started:
     code is configured to use Compile time switches, allowing options on what features you want
 
   BLE (Bluetooth Low Energy) this is different to the older Blutooth 2.0 serial and not compatableSupports Rev Ideal mode, set RevIdeal >90 for pre spin. Change Select fire Mode Switch to turn off RevIdeal
-
-
-  MIT App Inventor
-  https://appinventor.mit.edu/                                          // Phone App dev tool, Android phone only
-
-  https://www.youtube.com/watch?v=RvbWl8rZOoQ&ab_channel=MoThunderz     // App development tool and training video
 
 
   //------------------ Dev Notes -----------------------------------------------------
