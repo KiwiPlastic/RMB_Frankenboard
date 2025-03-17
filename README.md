@@ -77,16 +77,16 @@ Confirm PCB operation in one of two ways: -
 Install App on to Android phone from this this link https://play.google.com/apps/internaltest/4701250598279133112
 or use APK file in this repository to install App.
 
-Power up RMB-Franken board, using USB-C lead in to a USB power supply or USB on a PC/Laptop
+	Power up RMB-Franken board, using USB-C lead in to a USB power supply or USB on a PC/Laptop
 	
-Use App to connect to RMB-Frankenboard and confirm its working by scanning and connecting.
+	Use App to connect to RMB-Frankenboard and confirm its working by scanning and connecting.
 
 - Option 2. Using Arduino IDE. 
 Plug in a USB C data sync lead (Not a charger lead) between RMB-Frankenboard and PC.
 Start Arduino IDE and set serial port via tools menu to correct number	
-Open IDE serial monitor window, set board rate to 115200. You should see text output, probably "BAT low.
+	Open IDE serial monitor window, set board rate to 115200. You should see text output, probably "BAT low.
 
-If not, close serial window, try reboot by via power cycle (unplug USB lead and plug back in), immediately open serial window open, you should see quite a few lines of text on startup.
+	If not, close serial window, try reboot by via power cycle (unplug USB lead and plug back in), immediately open serial window open, you should see quite a few lines of text on startup.
 
 Once you have confirmed you have a working board on the bench, you can start your build. Install board and solder up.
 
