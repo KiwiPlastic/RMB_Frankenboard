@@ -67,7 +67,10 @@ RMB-Frankenboard is actively evolving and currently consists of these Features
  - Rev Sw NO, COM
  - Mag Sw NO, COM
 
- - Android phone & app for configuration, else is on factory defaults. NOTE: App does not work on iPhone.
+ - Android phone & app for configuration, else is on factory defaults.	
+	NOTE: App does not work on iPhone.
+	
+	NOTE2: Android phone does not need to be connected to a GSM network. Frankenboard uses the phones Blue Tooth for a connection. App can be downloaded to via local Wi-Fi connection.
 
 ## Getting Started
 On receiving your RMB-Frankenboard, the first thing to do BEFORE any soldering is started, is to confirm its operation. Do not remove aerial.
@@ -88,7 +91,8 @@ Start Arduino IDE and set serial port via tools menu to correct number
 
 	If not, close serial window, try reboot by via power cycle (unplug USB lead and plug back in), immediately open serial window open, you should see quite a few lines of text on startup.
 
-Once you have confirmed you have a working board on the bench, you can start your build. Install board and solder up.
+Once you have confirmed you have a working board on the bench, you can start your build. 
+Install board and solder up.
 
 
 ## Completely Wired Power Up and Operation
@@ -183,7 +187,37 @@ On receipt from PayPal that you have paid we ship.
 We plan to have an Esty store shortly to make this more simple
 
 
+## Flash Download Tool
+Arduino IDE: Sketch\Export Compiled Binary
+This is already done, files can be found in sub dir of flash tool. \bin
+
+Disconnect Li-Po
+Close Arduino IDE
+Open Flash Download Tool
+
+First Window Select:-
+- ESP32 C3
+- Development
+- USB
+
+With reference to screen shoot in folder
+Setup the download window :-
+
+- Bootloader.bin 		0x0
+- Partions.Bin 		0x08000
+- RMB ESP32 V35.Bin 	0x010000
+
+40Mhz 
+DIO
+DoNotChgBin = off
+Combine = off
+Select com port at 115200
+Click Start…wait
+Power cycle RMB Frankenbord via USB lead. What beeps does it do?
+
+
 ## Links
 https://play.google.com/apps/internaltest/4701250598279133112
+Note your email needs to be registered with us before this will work
 
 https://github.com/KiwiPlastic/RMB_Frankenboard

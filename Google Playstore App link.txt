@@ -1,4 +1,5 @@
 
 https://play.google.com/apps/internaltest/4701250598279133112
+Note your email needs to be registered with us before this will work
 
 https://github.com/KiwiPlastic/RMB_Frankenboard
