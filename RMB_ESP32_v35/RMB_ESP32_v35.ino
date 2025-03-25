@@ -159,13 +159,11 @@ Preferences preferences;
 #define PIN_TRIGGER D3      // Trigger                IP
 #define PIN_SELF_A D4       // Select Fire A Sw       IP
 #define PIN_SELF_B D5       // Select Fire B Sw       IP
-#define PIN_RUN D6          // Pusher                 OP           D6 should be used as O/P only, to do with boot straping
-//#define PIN_RUN D10          // Pusher                 OP        4 my one D6 broken   D6 should be used as O/P only, to do with boot straping
+#define PIN_MAG_SW D6      // Mag switch             IP
 #define PIN_REV_SW D7       // RevSw   PB             IP
 #define PIN_ESC_1 D8        // Stage 1 ESC output     OP           ESC Stage 1  D8 is a boot strap pin. must be high at startup
 #define PIN_ESC_2 D9        // Stage 2 ESC output     OP           ESC Stage 2  D9 is a boot strap pin. must be high at startup
-#define PIN_MAG_SW D10      // Mag switch             IP
-//#define PIN_MAG_SW D6      // Mag switch             IP
+#define PIN_RUN D10          // Pusher                 OP        4 my one D6 broken   D6 should be used as O/P only, to do with boot straping
 
 //----------------------------------------------------------------------------------------
 //Motors 

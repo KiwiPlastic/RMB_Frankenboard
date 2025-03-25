@@ -66,21 +66,25 @@ RMB-Frankenboard is actively evolving and currently consists of these Features
  - Select fire, 3 position switch, NO, COM, NO
  - Rev Sw NO, COM
  - Mag Sw NO, COM
+ - USB type C Data Sync lead
 
  - Android phone & app for configuration, else is on factory defaults.	
 	NOTE: App does not work on iPhone.
 	
 	NOTE2: Android phone does not need to be connected to a GSM network. Frankenboard uses the phones Blue Tooth for a connection. App can be downloaded to via local Wi-Fi connection.
 
-## Getting Started
+## Getting Started - First Power Up
 On receiving your RMB-Frankenboard, the first thing to do BEFORE any soldering is started, is to confirm its operation. Do not remove aerial.
+
+First download the repository by clicking the big green button over on the Right and selecting the zip.
+You will also need Arduino IDE and a USB type C data sync cable
 
 Confirm PCB operation in one of two ways: -
 - Option 1. Using Phone App. 
 Install App on to Android phone from this this link https://play.google.com/apps/internaltest/4701250598279133112
 or use APK file in this repository to install App.
 
-	Power up RMB-Franken board, using USB-C lead in to a USB power supply or USB on a PC/Laptop
+	Power up RMB-Franken board, using USB-C lead into a USB power supply or USB on a PC/Laptop
 	
 	Use App to connect to RMB-Frankenboard and confirm its working by scanning and connecting.
 
@@ -94,44 +98,104 @@ Start Arduino IDE and set serial port via tools menu to correct number
 Once you have confirmed you have a working board on the bench, you can start your build. 
 Install board and solder up.
 
+## Leave one leg of Solenoid disconnected
 
-## Completely Wired Power Up and Operation
-Once wires are connected, the RMB-Frankenboad needs to be powered from a Li-po battery, to power up correctly. 
 
-### Before powering up...
-Solenoid pusher must have a aligned dufa attached to it, for the optical interrupts on the solder side of PCB to work correctly.
-- Once dufa is in place ensure you can hold the pusher in the fully out(on) position. 
-- The dufa should be sitting between the front Optic interrupt gate and NOT touching it.
-- Let the pusher go, in such a way that it snaps back via the spring. First time do it slow.
-- Once again ensure the dufa has not come in contact with the rear Gate, and is sitting nicely between its uprights.
+## Optical Interrupt and Solenoid Duffer
+BEFORE powering up...
 
-Tech Note: If this is not configured before power up, the pcb will not function correctly. 
-It will do single shot slowly, no burst or full auto.
-Due to the Mosfet being turned hard on for an extended period, you might damage the Mosfet missing this step. 
-If there is a fault with the optics this is how it will respond.
+- Solenoid pusher must have an aligned Duffer attached to it, for the optical interrupts on the solder side of PCB to work correctly.
+
+- NOTE: If this is Duffer is not aligned correctly it will jam and the PCB will smoke and be damaged.
+
+- The Solenoid PCB assembly may need to be pulled apart and put back together a few times to get the operation and tolerances correct.
+
+- On first time assembly the Duffer will be to long.
+
+- Manually move the solenoid in/out, noting where the Duffer touches. 
+
+- Disassemble and file Duffer. 
+
+- Repeat
+
+- Once done correctly you should be able to manually push the pusher out with no resistance along its travel, until it reaches full travel and sits between the front Optic gate.
+ 
+- Let it go slowly, and it should go back to rest between the rear Optic gate. If not dissemble and adjust. If you need to help it, it’s not correct.
+
+- There cannot be the slightest touch between Optic gate and Solenoid Duffer. At high ROF this will course a jam and magic smoke will appear.
+
+- Finaly, hold the pusher in the forward position and let the pusher go, in such a way that it snaps back via the spring. Ensure Duffer goes back through rear Optic gate without collision.
+
+Tech Note: If this is not configured correctly before power up, the RMB-Frankenboard will not function correctly and could burn out.
+
 
 ### BLE Aerial
 The BLE Aerial has a very delicate plug, we do not recommend removing it, as it may become damaged and not reconnect to PCB.
-Do not power up RMB-Frankenboard without aerial connected, this will damage the ESP32 chip.
+Do not power up RMB-Frankenboard without the Aerial connected, this will damage the ESP32 chip, with back RF.
+
+## Power Up and Testing
+Once wires are connected, the RMB-Frankenboard needs to be powered from a Li-po battery, to power up correctly. 
+
+The RMB-Frankenboard uses serial output to indicate status.
+We can use this to check for correct operation, before using the Trigger.
+
+You will need a Laptop/PC with Arduino IDE running and a USB C type data sync lead, not a charger lead.
+
+### Plug in Li-Po battery NO USB lead
+1. You should here the startup beeps of the ESC's, (Beep, Beep, pause Beep).
+
+2. Plug in USB lead 
+
+3. Start IDE, open serial monitor, and configure com port and baud rate 112500
+
+4. Power cycle RMB-Frankenboard by unplugging USB and plug back in. You should see text data in the IDE serial Window.
+
+5. Change the Select Fire Switch position. Serial Monitor will indicate switch position: - Singal Burst Auto. Leave on Singal.
+
+6. Manually move pusher forward, while watching serial Monitor. 
+Rear Optic Gate will indicate 1 and 0, push forward and Front Optic Gate will indicate 1 and 0. If there is resistance, or a tight spot, it needs to be fixed. Disassemble and adjust (file).
+
+7. With Solenoid DISCONNECTED. 
+Disconnect USB lead. 
+Set Select fire switch to SINGLE shot.
+While watching Mosfet pcb, pull trigger once. 
+Red LED on Mosfet pcb should light bright and momentary, motors should also spin up.
+Try again to be sure.
+Do not move the Select Fire Switch
+Disconnect battery
+
+8. With battery disconnected, solder other solenoid wire into correct hole on RMB-Frankenboard. NO USB lead.
+Reconnect battery
+Pull Trigger once
+Pusher should snap fast, to do a single shot and flywheels spin.
+Try again x 3 or 4 times
+Only if that worked, then try Burst, then Full Auto.
 
 
-### Plug your Li-Po battery in.
-You should here the startup beeps of the ESC's, (Beep, Beep, pause Beep).
-
-Connect to RMB-Frankenboard via the app, confirm its reading battery voltage eg will be around 12v
-
-Set Select fire switch to SINGLE shot and pull trig. Pusher should snap fast, to do a single shot and flywheels spin.
-Only if that worked then try Burst, then Full Auto.
-Completed.
+Tech Note: 
+If something is wrong with the alignment of optic gates and the Dufa, it will do single shot slowly. Burst and full auto will drive Mosfet fully hard on (red led n) making magic smoke if solenoid is connected. 
 
 
-### RMB-Frankenboard Operation
+9. Connect to RMB-Frankenboard via the app, confirm its reading battery voltage eg will be around 12v. 
+
+
+### RMB-Frankenboard App and Operation
 The firmware comes with default configuration setting, and will work fine without the App. 
+
 However, if you want to change the settings or use a remote trigger you will need the app.
+
 The RMB-Frankenboard can be set back to defaults by holding trigger while power up.
 
-The App displays status for Battery Volts, Select Fire Mode, Darts Shot
-Two buttons, Trigger and Start (Game Start).
+If you have purchased an RMB-Frankenboard, you can download the app from this link: -
+https://play.google.com/apps/internaltest/4701250598279133112
+
+Alternatively, the apps, apk file is also in the repository and can be installed directly to the phone.
+
+The Android phone does not need to be connected to a GSM network. Frankenboard uses the phones Blue Tooth for a connection, not the GSM network. 
+The App can be installed via local Wi-Fi connection.
+
+The App displays status for Battery Volts, Select Fire Mode, Darts Shot,
+Trigger and Start (Game Start).
 
 ### Slider Settings: -
 - Burst Size
@@ -150,19 +214,19 @@ Change Select fire Mode Switch to turn ideal off until next shot
 If you have a rev button it works like normal, hold it in for on.
 
 ## Fault finding
-The RMB-Frankenboard has a continual serial output that can be monitored via the serial window in Arduino IDE at 15200 baud.
+The RMB-Frankenboard has a event based serial output that can be monitored via the serial window in Arduino IDE at 15200 baud.
 
 The serial output can be used to see that buttons, switch's etc are working.
 
-If you cannot see the serial output, there's something not right. Power down. Does it give serial output when powered from USB? Ie no li-po Battery.
+If you cannot see the serial output, there's something not right. Power down. Does it give serial output when powered from USB only? Ie no Li-Po Battery.
 
 ## Word of warning
 When you have the USB plugged in, DISCONNECT the solenoid or do not operate the trigger. 
 The solenoid generates back EMF and can damage the USB port, I speck form experience.
 
-Do not power up RMB-Frankenboard without aerial connected, this will damage the ESP32 chip.
+Do not power up RMB-Frankenboard without the Aerial connected, this will damage the ESP32 chip with back RF.
 
-This project is underdevelopment and actively evolving, please report issues.
+This project is underdevelopment and actively evolving, please report issues so we can make improvements.
 
 
 ## How to Purchase RMB-Frankenboard
@@ -188,33 +252,45 @@ We plan to have an Esty store shortly to make this more simple
 
 
 ## Flash Download Tool
-Arduino IDE: Sketch\Export Compiled Binary
-This is already done, files can be found in sub dir of flash tool. \bin
+This tool allows flashing of the firmware via *.Bin files.
+It is a lot simpler than getting the correct libarys and a working compile from the Arduino IDE.
 
-Disconnect Li-Po
-Close Arduino IDE
-Open Flash Download Tool
+Firmware upgrades will be done using this tool.
 
-First Window Select:-
-- ESP32 C3
-- Development
-- USB
+The sub folder \bin in Flash download tool has the *.bin files it it.
+
+Procedure: -
+- Disconnect Li-Po Battery
+- Close Arduino IDE
+- Plug in USB data sync cable (not a charging cable)
+- Open Flash Download Tool
+- First Window Select: -
+-   ESP32 C3
+-   Development
+-   USB
 
 With reference to screen shoot in folder
-Setup the download window :-
+Setup the download window. With correct path, and in this order.
 
-- Bootloader.bin 		0x0
-- Partions.Bin 		0x08000
-- RMB ESP32 V35.Bin 	0x010000
 
-40Mhz 
-DIO
-DoNotChgBin = off
-Combine = off
-Select com port at 115200
-Click Start…wait
-Power cycle RMB Frankenbord via USB lead. What beeps does it do?
+ - Bootloader.bin 		0x0
+ - Partions.Bin 		0x08000
+ - RMB ESP32 V35.Bin 	0x010000
 
+- 40Mhz 
+- DIO
+- DoNotChgBin = off
+- Combine = off
+- Select com port at 115200
+
+Put chip in Bootloader mode. 
+The chip has two buttons, one each side of the Arieal socket.
+One is Reset = R, other is Boot = B
+- Unplug USB
+- While holding the B boot down plug the USB back in
+- It will now power up in Bootloader mode
+- Click Start…wait for green bar to move across screen
+Flashing Complete
 
 ## Links
 https://play.google.com/apps/internaltest/4701250598279133112
