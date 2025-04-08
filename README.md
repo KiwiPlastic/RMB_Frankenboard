@@ -76,7 +76,7 @@ RMB-Frankenboard is actively evolving and currently consists of these Features
 ## Getting Started - First Power Up
 On receiving your RMB-Frankenboard, the first thing to do BEFORE any soldering is started, is to confirm its operation. Do not remove aerial.
 
-First download the repository by clicking the big green button over on the Right and selecting the zip.
+First download the repository by clicking the green button over on the right says ‘CODE’ and selecting the zip.
 You will also need Arduino IDE and a USB type C data sync cable
 
 Confirm PCB operation in one of two ways: -
@@ -294,6 +294,12 @@ Flashing Complete
 
 ## Links
 https://play.google.com/apps/internaltest/4701250598279133112
+
 Note your email needs to be registered with us before this will work
 
+
 https://github.com/KiwiPlastic/RMB_Frankenboard
+
+https://www.arduino.cc/en/software/
+
+
