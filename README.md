@@ -1,24 +1,4 @@
 # RMB_Frankenboard
-RMB-Frankenboard developed By RICHRD NICHOLSON from NEW ZEALAND
-A Team.C.R.A.P Project
-
-## Licensing
-Non-commercial license is in effect. This license flows to derivative works.
-You are free to remix / modify the blaster as you see fit. Please share
-If you post a remix, please link back to the original.
-Commercial use is allowed with the purchase of a RMB-Frankenboard at a ratio of one board = one commercial build.
-
-## Attributions
-(c) 2019-2021 Michael Ireland / Ireland Software / Airzone for example code used early on in project development work.
-BLE Server examples
-    Based on Neil Kolban example for IDF: https://github.com/nkolban/esp32-snippets/blob/master/cpp_utils/tests/BLE%20Tests/SampleNotify.cpp
-    Ported to Arduino ESP32 by Evandro Copercini
-    updated by chegewara and MoThunderz
-
-## License
-RMB-Frankenboard
-by Team C.R.A.P is licensed under the Creative Commons - Attribution - Non-Commercial Licence
-https://creativecommons.org/licenses/by-nc/4.0/
 
 ## Introduction
 RMB-Frankenboard. A mix of different PCB modules hooked up, flashed and ready to go with a Signal, or Two stage brushless Nerf Blaster type build. Designed to be used with a Neutron solenoid, ramping a 30 dps plus out of the box. Comes with an esp32 MCU and optic gates on the back of PCB for the closed loop feedback.
@@ -26,7 +6,7 @@ RMB-Frankenboard. A mix of different PCB modules hooked up, flashed and ready to
 Controlled and configuration via Blue Tooth app on your phone and a select fire switch on the blaster for fire modes on the go. 
 The RMB-Frankenboard can go into any type of Nerf type Blaster with a solenoid, and brushless flywheels. This could be a factory mod, or a 3d printed Blaster.
 
-RMB-Frankenboard is integrated into the newest version of Mjölnir evolved files, which can be found in this repository. 
+RMB-Frankenboard is integrated into the newest version of MjÃ¶lnir evolved files, which can be found in this repository. 
 
 RMB-Frankenboard is actively evolving and currently consists of these Features
 
@@ -76,7 +56,7 @@ RMB-Frankenboard is actively evolving and currently consists of these Features
 ## Getting Started - First Power Up
 On receiving your RMB-Frankenboard, the first thing to do BEFORE any soldering is started, is to confirm its operation. Do not remove aerial.
 
-First download the repository by clicking the green button over on the right says ‘CODE’ and selecting the zip.
+First download the repository by clicking the green button over on the right says â€˜CODEâ€™ and selecting the zip.
 You will also need Arduino IDE and a USB type C data sync cable
 
 Confirm PCB operation in one of two ways: -
@@ -120,7 +100,7 @@ BEFORE powering up...
 
 - Once done correctly you should be able to manually push the pusher out with no resistance along its travel, until it reaches full travel and sits between the front Optic gate.
  
-- Let it go slowly, and it should go back to rest between the rear Optic gate. If not dissemble and adjust. If you need to help it, it’s not correct.
+- Let it go slowly, and it should go back to rest between the rear Optic gate. If not dissemble and adjust. If you need to help it, itâ€™s not correct.
 
 - There cannot be the slightest touch between Optic gate and Solenoid Duffer. At high ROF this will course a jam and magic smoke will appear.
 
@@ -289,7 +269,7 @@ One is Reset = R, other is Boot = B
 - Unplug USB
 - While holding the B boot down plug the USB back in
 - It will now power up in Bootloader mode
-- Click Start…wait for green bar to move across screen
+- Click Startâ€¦wait for green bar to move across screen
 Flashing Complete
 
 ## Links
@@ -297,9 +277,25 @@ https://play.google.com/apps/internaltest/4701250598279133112
 
 Note your email needs to be registered with us before this will work
 
-
 https://github.com/KiwiPlastic/RMB_Frankenboard
 
 https://www.arduino.cc/en/software/
 
+## Attributions
+(c) 2019-2021 Michael Ireland / Ireland Software / Airzone for example code used early on in project development work.
+BLE Server examples
+    Based on Neil Kolban example for IDF: https://github.com/nkolban/esp32-snippets/blob/master/cpp_utils/tests/BLE%20Tests/SampleNotify.cpp
+    Ported to Arduino ESP32 by Evandro Copercini
+    updated by chegewara and MoThunderz
+	
+## Licensing
+Non-commercial license is in effect. This license flows to derivative works.
+You are free to remix / modify the blaster as you see fit. Please share
+If you post a remix, please link back to the original.
+Commercial use is allowed with the purchase of a RMB-Frankenboard at a ratio of one board = one commercial build.
+
+## License
+RMB-Frankenboard
+by Team C.R.A.P is licensed under the Creative Commons - Attribution - Non-Commercial Licence
+https://creativecommons.org/licenses/by-nc/4.0/
 
