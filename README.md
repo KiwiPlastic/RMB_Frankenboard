@@ -277,16 +277,9 @@ https://play.google.com/apps/internaltest/4701250598279133112
 
 Note your email needs to be registered with us before this will work
 
-
 https://github.com/KiwiPlastic/RMB_Frankenboard
 
 https://www.arduino.cc/en/software/
-
-## Licensing
-Non-commercial license is in effect. This license flows to derivative works.
-You are free to remix / modify the blaster as you see fit. Please share
-If you post a remix, please link back to the original.
-Commercial use is allowed with the purchase of a RMB-Frankenboard at a ratio of one board = one commercial build.
 
 ## Attributions
 (c) 2019-2021 Michael Ireland / Ireland Software / Airzone for example code used early on in project development work.
@@ -294,6 +287,12 @@ BLE Server examples
     Based on Neil Kolban example for IDF: https://github.com/nkolban/esp32-snippets/blob/master/cpp_utils/tests/BLE%20Tests/SampleNotify.cpp
     Ported to Arduino ESP32 by Evandro Copercini
     updated by chegewara and MoThunderz
+	
+## Licensing
+Non-commercial license is in effect. This license flows to derivative works.
+You are free to remix / modify the blaster as you see fit. Please share
+If you post a remix, please link back to the original.
+Commercial use is allowed with the purchase of a RMB-Frankenboard at a ratio of one board = one commercial build.
 
 ## License
 RMB-Frankenboard
