@@ -1,5 +1,9 @@
 # RMB_Frankenboard
 
+![](https://github.com/KiwiPlastic/RMB_Frankenboard/blob/main/Images/RMB-Frankenboard2.png?raw=true)
+
+![](https://github.com/KiwiPlastic/RMB_Frankenboard/blob/main/Images/RMB-Frankenboard3.png?raw=true)
+
 ## Introduction
 RMB-Frankenboard. A mix of different PCB modules hooked up, flashed and ready to go with a Signal, or Two stage brushless Nerf Blaster type build. Designed to be used with a Neutron solenoid, ramping a 30 dps plus out of the box. Comes with an esp32 MCU and optic gates on the back of PCB for the closed loop feedback.
 
@@ -7,6 +11,8 @@ Controlled and configuration via Blue Tooth app on your phone and a select fire 
 The RMB-Frankenboard can go into any type of Nerf type Blaster with a solenoid, and brushless flywheels. This could be a factory mod, or a 3d printed Blaster.
 
 RMB-Frankenboard is integrated into the newest version of Mjölnir evolved files, which can be found in this repository. 
+
+![](https://github.com/KiwiPlastic/RMB_Frankenboard/blob/main/Images/Crono%202.jpg?raw=true)
 
 RMB-Frankenboard is actively evolving and currently consists of these Features
 
@@ -120,6 +126,8 @@ The RMB-Frankenboard uses serial output to indicate status.
 We can use this to check for correct operation, before using the Trigger.
 
 You will need a Laptop/PC with Arduino IDE running and a USB C type data sync lead, not a charger lead.
+
+![](https://github.com/KiwiPlastic/RMB_Frankenboard/blob/main/Images/Mjolnir%20Evolved%20Chassy%20Assembly.jpg?raw=true)
 
 ### Plug in Li-Po battery NO USB lead
 1. You should here the startup beeps of the ESC's, (Beep, Beep, pause Beep).
@@ -294,8 +302,6 @@ You are free to remix / modify the blaster as you see fit. Please share
 If you post a remix, please link back to the original.
 Commercial use is allowed with the purchase of a RMB-Frankenboard at a ratio of one board = one commercial build.
 
-## License
+## 📜 License
 RMB-Frankenboard
-by Team C.R.A.P is licensed under the Creative Commons - Attribution - Non-Commercial Licence
-https://creativecommons.org/licenses/by-nc/4.0/
-
+by Team C.R.A.P is licensed under the Creative Commons Attribution - Non-Commercial Licence. Zero v1.0 Universal License. See `LICENSE` for more information.
