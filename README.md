@@ -59,6 +59,8 @@ RMB-Frankenboard is actively evolving and currently consists of these Features
 	
 	NOTE2: Android phone does not need to be connected to a GSM network. Frankenboard uses the phones Blue Tooth for a connection. App can be downloaded to via local Wi-Fi connection.
 
+<img width="2061" height="1041" alt="RMB-Frankenboard Wiring Diagram" src="https://github.com/user-attachments/assets/5804e1e7-890e-4e71-9a54-a8ca5ef92918" />
+
 ## Getting Started - First Power Up
 On receiving your RMB-Frankenboard, the first thing to do BEFORE any soldering is started, is to confirm its operation. Do not remove aerial.
 
